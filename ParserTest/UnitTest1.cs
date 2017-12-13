@@ -22,7 +22,6 @@ namespace ParserTest
             var nameparser = new NameDayParser.NameDay();
             var result = nameparser.FindNameDay("30.11");
             Assert.AreEqual(expected, result);
-
         }
 
         [TestMethod]
