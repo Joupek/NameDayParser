@@ -49,11 +49,11 @@ namespace NameDayParser
         {
             if (_nameDays.ContainsKey(date))
             {
-                return string.Format("Current date is name day for {0}", _nameDays[date]);
+                return _nameDays[date];
             }
             else
             {
-                return string.Format("there is no name day for date {0}", date);
+                return string.Empty;
             }
         }
         private bool validateRow(string[] line)

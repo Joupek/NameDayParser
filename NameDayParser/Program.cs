@@ -24,7 +24,12 @@ namespace NameDayParser
                 {
                     var seekdate = DateTime.Parse(datearg);
                     var nameDay = new NameDay();
-                    Console.WriteLine(nameDay.FindNameDay(seekdate.ToString("dd.MM.")));
+                    var result = nameDay.FindNameDay(seekdate.ToString("dd.MM."));
+                    if(!string.IsNullOrEmpty(result))
+                        Console.WriteLine(result);
+                    else
+                        Console.WriteLine("No Data");
+
                 }
                 else
                    throw new Exception("Given Date in not valid format");
